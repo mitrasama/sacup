@@ -7,30 +7,32 @@ class Page extends CI_Controller{
     }
   }
 
-  //jika yang login adalah admin
+  //jika yang login adalah HRD
   function index(){
-    //Allowing akses to admin only
+    //Allowing akses to HRD only
       if($this->session->userdata('level')==='1'){
-          $this->load->view('dashboard_view');
+          $this->load->view('hrd/header');
+          $this->load->view('hrd/content');
+          $this->load->view('hrd/footer');
       }else{
           echo "Access Denied";
       }
 
   }
 
-  function staff(){
-    //Allowing akses to staff only
+  function manajer(){
+    //Allowing akses to Manajer only
     if($this->session->userdata('level')==='2'){
-      $this->load->view('dashboard_view');
+      $this->load->view('manajer/dashboard_view');
     }else{
         echo "Access Denied";
     }
   }
 
-  function author(){
-    //Allowing akses to author only
+  function admin(){
+    //Allowing akses to Admin only
     if($this->session->userdata('level')==='3'){
-      $this->load->view('dashboard_view');
+      $this->load->view('admin/dashboard_view');
     }else{
         echo "Access Denied";
     }
