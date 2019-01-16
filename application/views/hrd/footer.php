@@ -1,7 +1,7 @@
-<footer class="footer">
+<!-- <footer class="footer">
 	<div class="container">
-		<p class="text-center">Copyright &copy; 2019 Absensi Cuti Gelora Group</p>
+		<p class="text-muted">Copyright © 2019 Absensi Gelora Group</p>
 	</div>
-</footer>
+</footer> -->
 <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
 </html>

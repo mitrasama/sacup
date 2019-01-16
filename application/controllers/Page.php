@@ -20,6 +20,16 @@ class Page extends CI_Controller{
 
   }
 
+  function pegawai(){
+    if($this->session->userdata('level')==='1'){
+        $this->load->view('hrd/header');
+        $this->load->view('hrd/pegawai');
+        $this->load->view('hrd/footer');
+    }else{
+        echo "Access Denied";
+    }
+  }
+
   function manajer(){
     //Allowing akses to Manajer only
     if($this->session->userdata('level')==='2'){
